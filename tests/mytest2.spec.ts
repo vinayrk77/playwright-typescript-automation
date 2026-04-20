@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Verify Page URL', async ({ page }) => {
+test('Verify Page Url', async ({ page }) => {
   await page.goto('https://www.google.com/');
 
   const url = page.url();
