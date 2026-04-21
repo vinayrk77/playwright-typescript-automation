@@ -1,10 +1,11 @@
-import { test, expect } from '@playwright/test';
+import{test,expect} from "@playwright/test";
 
-test('Verify Page Title', async ({ page }) => {
-  await page.goto('https://www.google.com/');
+test("Verify Page Title",async ({page})=>{
+    await page.goto("https://www.google.com/?zx=1776690240333");
 
-  const title = await page.title();
-  console.log('Title:', title);
+    let title:string=await page.title();
+    console.log("Title",title);
 
-  await expect(page).toHaveTitle(/Google/);
-});
+
+    await expect(page).toHaveTitle("Google");
+})
