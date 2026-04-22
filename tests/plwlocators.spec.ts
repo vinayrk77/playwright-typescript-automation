@@ -7,10 +7,15 @@ test("Verify Playwright Locators",async ({page})=>{
     const logo:Locator=page.getByAltText("Best Website for Practice Automation Testing: Free UI and REST API Examples and Apps. Using Cypress, Playwright, Selenium, WebdriverIO and Postman.")
     await expect (logo).toBeVisible();
 
-    //const text:Locator=page.getByText("Listen to your notes")
-    //await expect (text).toBeVisible()
+    const text:Locator=page.getByText("Listen to your notes")
+    await expect (text).toBeVisible()
 
     await expect (page.getByText("Do you enjoy")).toBeVisible()
+
+    await page.getByRole('link', { name: /Test Cases/i }).first().click();
+
+    await expect (page.getByRole("heading", {name:/Practice Test Cases/i})).toBeVisible();
+
 
 
 })
