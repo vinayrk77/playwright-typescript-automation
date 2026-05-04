@@ -14,7 +14,25 @@ console.log("The number of auto suggested options are:", count);
 
 //printing all the suggested option in the console
 
+//console.log("5th option:", await options.nth(5).innerText());
 
+console.log("Printing all the auto suggestions: ");
+for(let i=0; i<count; i++ )
+{
+   console.log (await options.nth(i).innerText()); 
+}
+
+// select an option displayed on the suggested list
+
+for(let i=0; i<count; i++ )
+{
+   const text = (await options.nth(i).innerText()); 
+   if(text==='earbuds')
+   {
+    options.nth(i).click();
+    break;
+   }
+}
 
 await page.waitForTimeout(5000);
 
