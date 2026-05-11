@@ -37,4 +37,49 @@ for(let text of secondrowtext)
     console.log(text);
 }
 
+// read all the data from table
+console.log("Printing all table data")
+const allrowdata = await rows.all()
+for(let row of allrowdata.slice(1))
+{
+    const cols = await row.locator('td').allInnerTexts();
+    console.log(cols.join('\t'));
+}
+
+//print book names where author is Mukesh
+console.log("Books Writtern by Mukesh.....");
+
+const mukeshbooks:string[] = [];
+
+for(let row of allrowdata.slice(1))
+{
+    const cells = await row.locator('td').allInnerTexts();
+    const author = cells[1];
+    const books = cells[0];
+
+    if(author === 'Mukesh')
+    {
+        console.log(`${author} \t ${books}`);
+        mukeshbooks.push(books);
+
+    }
+}
+expect(mukeshbooks).toHaveLength(2);
+
+//calculate proce of all books
+
+let totalprice:number = 0;
+for(let row of allrowdata.slice(1))
+{
+    const cells = await row.locator('td').allInnerTexts();
+    const price = cells[3];
+
+    totalprice = totalprice+parseInt(price)
+
+}
+console.log("Totalprice is ", totalprice);
+expect(totalprice).toBe(7100);
+
+
+
 });
