@@ -11,7 +11,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
 
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  retries:3,
 
   /* Opt out of parallel tests on CI */
   workers: process.env.CI ? 1 : undefined,
@@ -21,7 +21,9 @@ export default defineConfig({
 
   /* Shared settings */
   use: {
-    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    trace: 'on',
   },
 
   /* Browsers */

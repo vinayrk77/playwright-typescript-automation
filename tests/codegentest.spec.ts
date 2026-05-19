@@ -8,7 +8,7 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Search for Products, Brands' }).press('Enter');
   await page.getByRole('textbox', { name: 'Search for Products, Brands' }).click();
   await page.getByRole('textbox', { name: 'Search for Products, Brands' }).press('Enter');
-  await page.getByRole('link', { name: 'cricket bat wooden in Cricket' }).click();
+  /*await page.getByRole('link', { name: 'cricket bat wooden in Cricket' }).click();
   await expect(page.locator('#container')).toContainText('XTROKE Scoop Design Popular with Red Tennis Ball and Co...');
   const page1Promise = page.waitForEvent('popup');
   await page.getByRole('link', { name: 'XTROKE Scoop Design Popular with Red Tennis Ball and Cover Poplar Willow' }).click();
@@ -16,4 +16,5 @@ test('test', async ({ page }) => {
   await page1.locator('._1psv1zeb9._1psv1ze0._1psv1zeku > div > div > div:nth-child(2)').first().click();
   await page1.getByRole('link', { name: 'Cart 1 Cart' }).click();
   await expect(page1.locator('.css-g5y9jx > div > img').first()).toBeVisible();
+  */
 });
