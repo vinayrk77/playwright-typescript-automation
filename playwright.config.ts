@@ -5,7 +5,7 @@ export default defineConfig({
   testMatch: '**/*.spec.ts',
 
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false, //changed by Vinay
 
   /* Fail the build on CI if you accidentally left test.only */
   forbidOnly: !!process.env.CI,
