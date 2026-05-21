@@ -1,0 +1,27 @@
+[
+  {
+    "email": "vinayrk26@gmail.com",
+    "password": "vinay@123",
+    "validity": "valid"
+  },
+  {
+    "email": "johnsmith@gmail.com",
+    "password": "john@123",
+    "validity": "invalid"
+  },
+  {
+    "email": "invaliduser@example.com",
+    "password": "wrong@123",
+    "validity": "invalid"
+  },
+  {
+    "email": "testuser@gmail.com",
+    "password": "incorrect@456",
+    "validity": "invalid"
+  },
+  {
+    "email": "",
+    "password": "",
+    "validity": "invalid"
+  }
+]
