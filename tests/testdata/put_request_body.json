@@ -1,11 +1,11 @@
 {
-  "firstname": "Jhonny",
-  "lastname": "King",
-  "totalprice": 100000,
+  "firstname": "ommiee",
+  "lastname": "Rock",
+  "totalprice": 10,
   "depositpaid": true,
   "bookingdates": {
-    "checkin": "2026-06-12",
-    "checkout": "2026-07-31"
+    "checkin": "2026-10-12",
+    "checkout": "2026-10-31"
   },
-  "additionalneeds": "Banana"
+  "additionalneeds": "Mango"
 }
